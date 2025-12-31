@@ -23,12 +23,11 @@ export const produceCalendar = (date: Date): CalendarLayer[] => {
 
   const calendar: CalendarLayer[] = [];
 
-  // Empty cells for first week
+  
   for (let i = 0; i < firstDayIndex; i++) {
     calendar.push({ day: null, isSelected: false });
   }
 
-  // Actual days
   for (let day = 1; day <= totalDays; day++) {
     calendar.push({ day, isSelected: day === selectedDay });
   }
